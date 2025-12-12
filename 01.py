@@ -16,7 +16,7 @@ dsn = f"{host}:{caminho_db}"
 # Buscar nome da empresa
 def obter_nome_empresa():
     try:
-        con = fdb.connect(dsn=dsn, user="SYSDBA", password="masterkey")
+        con = fdb.connect(dsn=dsn, user="SYSDBA", password="********")
         cur = con.cursor()
         cur.execute("SELECT FIRST 1 EMPRESA_NOME FROM EMPRESAS")
         row = cur.fetchone()
